@@ -1,5 +1,5 @@
 import {Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn, ManyToOne} from "typeorm";
-import {ArticleList} from "./ArticleList";
+import {Article} from "./Article";
 
 @Entity()
 export class Comment {
@@ -15,7 +15,7 @@ export class Comment {
     @UpdateDateColumn()
     updated: Date;
 
-    @ManyToOne(type => ArticleList, article_list => article_list.comments, {onDelete: 'CASCADE', onUpdate: "CASCADE"})
-    article: ArticleList;
+    @ManyToOne(type => Article, article_list => article_list.comments, {onDelete: 'CASCADE', onUpdate: "CASCADE"})
+    article: Article;
 
 }

@@ -2,7 +2,7 @@ import {Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, OneToMany} fro
 import {Comment} from "./Comment";
 
 @Entity()
-export class ArticleList{
+export class Article {
     @PrimaryGeneratedColumn()
     id: number;
 
