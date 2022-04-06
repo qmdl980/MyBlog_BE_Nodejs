@@ -1,6 +1,6 @@
 import {Router} from "express";
 import {ArticleController} from "../controller/ArticleController";
-import {CategoryController} from "../controller/CategoryController";
+import {ArticleCategoryController} from "../controller/ArticleCategoryController";
 
 const routes = Router();
 
@@ -9,6 +9,6 @@ routes.put('/write_article', ArticleController.editArticle);
 routes.delete('/article',ArticleController.deleteArticle);
 routes.get('/articles', ArticleController.findAllArticle);
 routes.get('/article/:id', ArticleController.findOneArticle);
-routes.get('/category', CategoryController.findAllCategory);
+routes.get('/category', ArticleCategoryController.findAllCategory);
 
 export default routes;

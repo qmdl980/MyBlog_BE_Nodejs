@@ -18,6 +18,9 @@ export class Article {
     @Column("text")
     category: string;
 
+    @Column("bool")
+    is_article: boolean;
+
     @OneToMany(type => Comment, comment => comment.article)
     comments: Comment[];
 }
