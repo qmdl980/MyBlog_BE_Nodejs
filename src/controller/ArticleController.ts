@@ -3,12 +3,13 @@ import {getConnection} from "typeorm";
 
 export class ArticleController{
     static addArticle = async(req, res) => {
-        const {title, text, category} = req.body;
+        const {title, text, category, is_article} = req.body;
 
         const article = new Article();
         article.title = title;
         article.text = text;
         article.category = category;
+        article.is_article = is_article;
 
         const result = await getConnection().getRepository(Article).save(article);
 
